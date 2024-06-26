@@ -18,11 +18,11 @@ public class ImageChooser extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        // Initialize the root VBox
+        // This initialize the root VBox
         root = new VBox(10);
         root.setPadding(new Insets(10));
 
-        // Create a label to display the image
+        //This create a label to display the image
         Label imageLabel = new Label();
         Image image = new Image(getClass().getResource("/pig.jpeg").toExternalForm());
         ImageView imageView = new ImageView(image);
@@ -30,10 +30,10 @@ public class ImageChooser extends Application {
         imageView.setFitHeight(100);
         imageLabel.setGraphic(imageView);
 
-        // Create a toggle group for the radio buttons
+        // This create a toggle group for the radio buttons
         final ToggleGroup group = new ToggleGroup();
 
-        // Create 4 radio buttons with images
+        // This create 4 radio buttons with images
         RadioButton rb1 = new RadioButton("1. Pig");
         rb1.setToggleGroup(group);
         Image option1Image = new Image(getClass().getResource("/pig.jpeg").toExternalForm());
@@ -66,7 +66,7 @@ public class ImageChooser extends Application {
         option4ImageView.setFitHeight(50);
         rb4.setGraphic(option4ImageView);
 
-        // Create a button to submit the answer
+        // This create a button to submit the answer
         Button submitButton = new Button("Submit");
         submitButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
@@ -83,7 +83,7 @@ public class ImageChooser extends Application {
             }
         });
 
-        // Add components to the root VBox
+        // This add components to the root VBox
         root.getChildren().addAll(imageLabel, rb1, rb2, rb3, rb4, submitButton);
 
         // Create a scene and set the stage
